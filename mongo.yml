@@ -1,4 +1,3 @@
-### Deployment###
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -8,29 +7,22 @@ spec:
     matchLabels:
       app: mongodb
   replicas: 1
-### Deployment ###
-
-    #### POD ###
-  template:
+  template: # template for the pods
     metadata:
       labels:
         app: mongodb
     spec:
       containers:
       - name: mongodb
-        image: mongo:latest
+        image: mongo:3.6.23
         volumeMounts:
           - name: mongo-persistent-storage
-            # This is the folder inside the container that will be mapped to a
-            # folder on our host.
             mountPath: /data/db
       volumes:
         - name: mongo-persistent-storage
-          # persistentVolumeClaim is the pointer to the config file that specifies HOW we want the mount
-          # to be implemented
+          # pointer to the configuration of HOW we want the mount to be implemented
           persistentVolumeClaim:
             claimName: mongo-pvc
-    #### POD ###
 ---
 kind: Service
 apiVersion: v1
@@ -41,5 +33,5 @@ spec:
     app: mongodb
   ports:
     - name: mongoport
-      port: 27012
+      port: 27017
   type: ClusterIP
