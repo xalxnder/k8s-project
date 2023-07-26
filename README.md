@@ -10,4 +10,7 @@ By completing this project, I gained better undersandting of the following:
 - AWS
   - Load Balancing
   - EC2 Instances
-  - S3 Buckets 
+  - S3 Buckets
+ 
+
+![local](https://github.com/xalxnder/k8s-project/blob/main/images/fleetman_Arch_minikube.jpg)
