@@ -14,3 +14,5 @@ By completing this project, I gained better undersandting of the following:
  
 
 ![local](https://github.com/xalxnder/k8s-project/blob/main/images/fleetman_Arch_minikube.jpg)
+![aws](https://github.com/xalxnder/k8s-project/blob/main/images/fleetman_Arch_AWS.jpg)
+
